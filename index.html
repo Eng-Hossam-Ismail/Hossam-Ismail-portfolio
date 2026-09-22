@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary SEO -->
+    <title>Hossam Ismail | Civil Engineer | Structural Engineering</title>
+    <meta name="description" content="Hossam Ismail | Civil &amp; Structural Engineer specializing in structural analysis, steel design and detailing. Based in Cairo, Egypt. Seeking full-time engineering opportunities." />
+    <meta name="author" content="Hossam Ismail" />
+    <meta name="keywords" content="Civil Engineer, Structural Engineering, Steel Design, Structural Analysis, ETABS, SAP2000, AutoCAD, Cairo, Egypt, Engineering Portfolio" />
+    <link rel="canonical" href="https://hossam-ismail.example.com/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Hossam Ismail | Civil Engineer | Structural Engineering" />
+    <meta property="og:description" content="Civil & Structural Engineer specializing in structural analysis, steel design and detailing. Cairo, Egypt." />
+    <meta property="og:url" content="https://hossam-ismail.example.com/" />
+    <meta property="og:image" content="/assets/profile/hossam-profile.webp" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="ar_EG" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Hossam Ismail | Civil Engineer | Structural Engineering" />
+    <meta name="twitter:description" content="Civil & Structural Engineer specializing in structural analysis, steel design and detailing. Cairo, Egypt." />
+    <meta name="twitter:image" content="/assets/profile/hossam-profile.webp" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Hossam Ismail",
+        "jobTitle": "Civil Engineer | Structural Engineering",
+        "address": { "@type": "PostalAddress", "addressLocality": "Cairo", "addressCountry": "Egypt" },
+        "email": "mailto:hossam.ismail.civil@gmail.com",
+        "telephone": "+201551645514",
+        "url": "https://hossam-ismail.example.com/",
+        "sameAs": ["https://www.linkedin.com/in/hosam-ismail"],
+        "knowsAbout": ["Structural Analysis", "Structural Design", "Steel Design", "Steel Detailing", "ETABS", "SAP2000", "AutoCAD", "SAFE"]
+      }
+    </script>
+  </head>
+  <body>
+    <script>
+      // Anti-FOUC: apply theme + language before React mounts
+      (function () {
+        try {
+          var theme = localStorage.getItem('hi-theme');
+          if (!theme) {
+            theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          }
+          if (theme === 'dark') document.documentElement.classList.add('dark');
+          document.documentElement.style.colorScheme = theme;
+
+          var lang = localStorage.getItem('hi-lang') || 'en';
+          document.documentElement.lang = lang;
+          document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+        } catch (e) {}
+      })();
+    </script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
