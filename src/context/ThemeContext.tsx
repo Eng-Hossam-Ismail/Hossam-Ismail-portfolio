@@ -9,23 +9,14 @@ interface ThemeCtx {
 
 const Ctx = createContext<ThemeCtx | null>(null);
 
-const STORAGE_KEY = 'hi-theme';
-
-function getInitial(): Theme {
-  if (typeof window === 'undefined') return 'light';
-  const stored = localStorage.getItem(STORAGE_KEY);
-  if (stored === 'light' || stored === 'dark') return stored;
-  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-}
-
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme, setTheme] = useState<Theme>(getInitial);
+  // Always default to 'light' — do not query system preference or persist across reloads
+  const [theme, setTheme] = useState<Theme>('light');
 
   useEffect(() => {
     const root = document.documentElement;
     root.classList.toggle('dark', theme === 'dark');
     root.style.colorScheme = theme;
-    localStorage.setItem(STORAGE_KEY, theme);
   }, [theme]);
 
   return (

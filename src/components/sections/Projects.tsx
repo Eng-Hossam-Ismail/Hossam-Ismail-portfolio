@@ -41,6 +41,36 @@ export function Projects() {
     });
   }, [rawEntries, activeCategory]);
 
+  const isHistoryPushedRef = useRef(false);
+
+  const handleOpen = (p: ProjectEntry) => {
+    setSelected(p);
+    isHistoryPushedRef.current = true;
+    window.history.pushState({ projectModal: p.id }, '', window.location.href);
+  };
+
+  const handleClose = () => {
+    setSelected(null);
+    if (isHistoryPushedRef.current) {
+      isHistoryPushedRef.current = false;
+      if (window.history.state?.projectModal) {
+        window.history.back();
+      }
+    }
+  };
+
+  useEffect(() => {
+    const handlePopState = () => {
+      if (isHistoryPushedRef.current) {
+        isHistoryPushedRef.current = false;
+        setSelected(null);
+      }
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
   return (
     <section id="projects" className="section-pad">
       <div className="mx-auto max-w-7xl container-px">
@@ -80,7 +110,7 @@ export function Projects() {
         ) : (
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {filteredEntries.map((p, i) => (
-              <ProjectCard key={p.id} project={p} index={i} onOpen={() => setSelected(p)} />
+              <ProjectCard key={p.id} project={p} index={i} onOpen={() => handleOpen(p)} />
             ))}
           </div>
         )}
@@ -89,7 +119,7 @@ export function Projects() {
       {/* Detail modal */}
       <AnimatePresence>
         {selected && (
-          <ProjectModal project={selected} onClose={() => setSelected(null)} />
+          <ProjectModal project={selected} onClose={handleClose} />
         )}
       </AnimatePresence>
     </section>
