@@ -94,4 +94,85 @@ export const projects: ProjectEntry[] = [
     ],
     featured: true,
   },
+  {
+    id: 'two-hinged-frames',
+    title: {
+      en: '2-Hinged Frames — Structural Design & Drafting',
+      ar: 'مشروع 2-Hinged Frames — التصميم والرسم الإنشائي',
+    },
+    shortDescription: {
+      en: 'Structural design and drafting of a 2-Hinged Frames structural system covering an area of 1,080 m² (18 × 60 m), completed as part of the ENSKIPA Workshop mentored by Eng. Eslam Ahmed.',
+      ar: 'مشروع التصميم والرسم الإنشائي لنظام 2-Hinged Frames بمساحة 1080 م² (18 × 60 م)، تم إعداده ضمن ورشة عمل ENSKIPA بإشراف م. إسلام أحمد.',
+    },
+    detailedDescription: {
+      en: 'Structural design and drafting project for a 2-Hinged Frames system covering an area of 1,080 m² with dimensions of 18 × 60 m, prepared during the ENSKIPA Workshop under the supervision of Eng. Eslam Ahmed. The project deliverables include the Solid Slab Plan, Column & Axis Layout, Foundation Plan, and structural Sections.',
+      ar: 'مشروع التصميم والرسم الإنشائي لمنشأ بنظام 2-Hinged Frames بمساحة 1080 م² وأبعاد 18 × 60 م، تم إنجازه ضمن ورشة عمل ENSKIPA بإشراف وتوجيه م. إسلام أحمد. تشمل مخرجات المشروع لوحة سقف البلاطة المصمتة (Solid Slab Plan)، لوحة المحاور والأعمدة، لوحة القواعد والأساسات، ولوحة القطاعات الإنشائية.',
+    },
+    type: {
+      en: 'Structural Design & Drafting',
+      ar: 'التصميم والرسم الإنشائي',
+    },
+    category: 'structural-design',
+    status: {
+      en: 'Completed (ENSKIPA Workshop)',
+      ar: 'مكتمل (ورشة عمل ENSKIPA)',
+    },
+    mentor: {
+      en: 'Eng. Eslam Ahmed',
+      ar: 'م. إسلام أحمد',
+    },
+    drawingSheets: [
+      {
+        sheetNumber: '01',
+        title: { en: 'Solid Slab Plan', ar: 'لوحة سقف البلاطة المصمتة' },
+        imageUrl: '/assets/projects/two-hinged-frames/05-solid-slab-plan.jpg',
+      },
+      {
+        sheetNumber: '02',
+        title: { en: 'Column & Axis Layout', ar: 'لوحة المحاور والأعمدة' },
+        imageUrl: '/assets/projects/two-hinged-frames/06-column-axis-layout.jpg',
+      },
+      {
+        sheetNumber: '03',
+        title: { en: 'Foundation Plan', ar: 'لوحة القواعد والأساسات' },
+        imageUrl: '/assets/projects/two-hinged-frames/07-foundation-plan.jpg',
+      },
+      {
+        sheetNumber: '04',
+        title: { en: 'Sections', ar: 'لوحة القطاعات' },
+        imageUrl: '/assets/projects/two-hinged-frames/08-sections.jpg',
+      },
+      {
+        sheetNumber: '3D',
+        title: { en: 'Second 3D View', ar: 'منظور ثلاثي الأبعاد ثانٍ' },
+        imageUrl: '/assets/projects/two-hinged-frames/04-3d-view-02.jpg',
+      },
+      {
+        sheetNumber: 'Doc',
+        title: { en: 'ENSKIPA Workshop Certificate', ar: 'شهادة ورشة عمل ENSKIPA' },
+        imageUrl: '/assets/projects/two-hinged-frames/certificate-enskipa.jpg',
+      },
+    ],
+    images: [
+      '/assets/projects/two-hinged-frames/03-3d-view-01.jpg',
+      '/assets/projects/two-hinged-frames/04-3d-view-02.jpg',
+      '/assets/projects/two-hinged-frames/05-solid-slab-plan.jpg',
+      '/assets/projects/two-hinged-frames/06-column-axis-layout.jpg',
+      '/assets/projects/two-hinged-frames/07-foundation-plan.jpg',
+      '/assets/projects/two-hinged-frames/08-sections.jpg',
+      '/assets/projects/two-hinged-frames/certificate-enskipa.jpg',
+    ],
+    documents: [
+      {
+        title: { en: 'Complete Drawing Set', ar: 'مجموعة اللوحات الكاملة' },
+        fileUrl: '/assets/projects/two-hinged-frames/complete-drawing-set.pdf',
+        type: 'drawing',
+      },
+      {
+        title: { en: 'ENSKIPA Workshop Certificate', ar: 'شهادة ورشة عمل ENSKIPA' },
+        fileUrl: '/assets/projects/two-hinged-frames/certificate-enskipa.jpg',
+        type: 'other',
+      },
+    ],
+  },
 ];
